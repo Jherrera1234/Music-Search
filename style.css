@@ -1,0 +1,28 @@
+body{
+  text-align: center;
+  
+}
+
+input {
+  padding: 8px;
+  border-radius: 2px;
+  border-radius: 14%;
+  margin: 5px;
+}
+button{
+  border: 5px solid black;
+  padding: 8px;
+  border-radius: 14%;
+  
+}
+.search-section{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  margin: 10px;
+}
+
+header{
+  border: 5px solid black;
+}
