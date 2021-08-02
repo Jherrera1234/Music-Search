@@ -3,7 +3,7 @@ Still in the works
 
 ## Project Description
 
-This project will be able to have a user search up an artist and see their top tracks and albums.
+This project will be able to have a user search up an artist and see their top tracks and albums. It will have the approiate images to accompany the album and tracks as well.
 
 ## API and Data Sample
 ```
@@ -85,7 +85,7 @@ size: "extralarge"
 - center it all and make it look neat
 - put numbers to the albums and tracks according to their ranks
 - add some photos for the background of the website 
-- 
+
 
 #### PostMVP  
 - Add second API that connects to the link for the songs or plays a sample
@@ -118,12 +118,12 @@ size: "extralarge"
 | Make button and search of the user | H | 1.5hrs| 1.5hrs | 1.5hrs |
 | Render data into an array | H | 4hrs| 4hrs | 4hrs |
 | Push data to search and button| H | 5hrs| 5hrs | 2.5hrs |
-| Testing | H | 3hrs| 3hrs | 3hrs |
+| Testing | M | 3hrs| 3hrs | 3hrs |
 | Add css to the data | H | 3hrs| 2.5hrs | 2.5hrs |
-| delete data when a new search | H | 3hrs| 2.5hrs | 2.5hrs |
-| Add css styling to website | H | 4.5hrs| 4.5hrs | 4.5hrs |
+| delete data when a new search is made| H | 3hrs| 2.5hrs | 2.5hrs |
+| Add css styling to website | M| 4.5hrs| 4.5hrs | 4.5hrs |
 | deploy website | H | 1hrs| 1hrs | 1hrs |
-| Add extra css styling | H | 3hrs| 2.5hrs | 2.5hrs |
+| Add extra css styling | L | 3hrs| 2.5hrs | 2.5hrs |
 | Total | H | 37hrs| 32hrs | 5hrs |
 
 ## Code Snippet
