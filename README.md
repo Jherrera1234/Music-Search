@@ -6,9 +6,71 @@ Still in the works
 This project will be able to have a user search up an artist and see their top tracks and albums.
 
 ## API and Data Sample
-
-Specify the API you are using and include a link. Show us a snippet of JSON returned by your API so we know you can access it and get the info you need
-
+```
+{
+toptracks: {
+track: [
+{
+name: "ONCE UPON A TIME (FREESTYLE)",
+playcount: "509081",
+listeners: "66545",
+url: "https://www.last.fm/music/IDK/_/ONCE+UPON+A+TIME+(FREESTYLE)",
+streamable: "0",
+artist: {
+name: "IDK",
+url: "https://www.last.fm/music/IDK"
+},
+image: [
+{
+#text: "https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png",
+size: "small"
+},
+{
+#text: "https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png",
+size: "medium"
+},
+{
+#text: "https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png",
+size: "large"
+},
+{
+#text: "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png",
+size: "extralarge"
+}
+],
+@attr: {
+rank: "1"
+}
+},
+{
+name: "24",
+playcount: "333321",
+listeners: "46583",
+url: "https://www.last.fm/music/IDK/_/24",
+streamable: "0",
+artist: {
+name: "IDK",
+url: "https://www.last.fm/music/IDK"
+},
+image: [
+{
+#text: "https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png",
+size: "small"
+},
+{
+#text: "https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png",
+size: "medium"
+},
+{
+#text: "https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png",
+size: "large"
+},
+{
+#text: "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png",
+size: "extralarge"
+}
+],
+```
 ## Wireframes
 
 Upload images of your wireframes to an image hosting site or add them to an assets folder in your repo and link them here with a description of each specific wireframe.
@@ -31,9 +93,6 @@ Upload images of your wireframes to an image hosting site or add them to an asse
 
 ## Project Schedule
 
-This schedule will be used to keep track of your progress throughout the week and align with our expectations.  
-
-You are **responsible** for scheduling time with your squad to seek approval for each deliverable by the end of the corresponding day, excluding `Saturday` and `Sunday`.
 
 |  Day | Deliverable | Status
 |---|---| ---|
@@ -68,11 +127,13 @@ Include a full list of features that have been prioritized based on the `Time an
 
 ## Code Snippet
 
-Use this section to include a brief code snippet of functionality that you are proud of and a brief description.  
 
 ```
-function reverse(string) {
-	// here is the code to reverse a string of text
+function removeTracks() {
+  const removeElement = TrackInfo
+  while (removeElement.lastChild) {
+    removeElement.removeChild(removeElement.lastChild)
+  }
 }
 ```
 
