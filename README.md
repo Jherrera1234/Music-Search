@@ -88,17 +88,18 @@ rank: "1"
 | --- | :---: |  :---: | :---: | :---: |
 | Adding Form | H | 3.5hrs| 3.5hrs | 3.5hrs |
 | Connecting the api to my laptop | H | 1.5hrs| 1.5hrs | 1.5hrs |
-| Retrieve data and test to see the data connects | H | 3hrs| 2.5hrs | 2.5hrs |
+| Retrieve data and test to see the data connects | H | 3hrs| 3hrs | 2.5hrs |
 | Make button and search of the user | H | 1.5hrs| 1.5hrs | 1.5hrs |
 | Render data into an array | H | 4hrs| 4hrs | 4hrs |
 | Push data to search and button| H | 5hrs| 5hrs | 2.5hrs |
 | Testing | M | 3hrs| 3hrs | 3hrs |
 | Add css to the data | H | 3hrs| 2.5hrs | 2.5hrs |
-| delete data when a new search is made| H | 3hrs| 2.5hrs | 2.5hrs |
+| Add Flex box and flex styling | H | 3hrs| 3hrs | 2.5hrs |
+| delete data when a new search is made| H | 3hrs| 3hrs | 2.5hrs |
 | Add css styling to website | M| 4.5hrs| 4.5hrs | 4.5hrs |
 | deploy website | H | 1hrs| 1hrs | 1hrs |
-| Add extra css styling | L | 3hrs| 2.5hrs | 2.5hrs |
-| Total | H | 37hrs| 32hrs | 5hrs |
+| Add extra css styling | L | 3hrs| 3hrs | 2.5hrs |
+| Total | H | 40hrs| 40hrs | 5hrs |
 
 ## Code Snippet
 
