@@ -73,7 +73,8 @@ size: "extralarge"
 ```
 ## Wireframes
 
-Upload images of your wireframes to an image hosting site or add them to an assets folder in your repo and link them here with a description of each specific wireframe.
+![image](https://user-images.githubusercontent.com/56912648/127868415-6877b2ea-b125-4b37-916a-12841b49cd55.png)
+
 
 
 
