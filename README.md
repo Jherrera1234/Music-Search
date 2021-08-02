@@ -112,19 +112,19 @@ Include a full list of features that have been prioritized based on the `Time an
 
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| Adding Form | H | 3hrs| 3.5hrs | 3.5hrs |
+| Adding Form | H | 3.5hrs| 3.5hrs | 3.5hrs |
 | Connecting the api to my laptop | H | 1.5hrs| 1.5hrs | 1.5hrs |
 | Retrieve data and test to see the data connects | H | 3hrs| 2.5hrs | 2.5hrs |
 | Make button and search of the user | H | 1.5hrs| 1.5hrs | 1.5hrs |
 | Render data into an array | H | 4hrs| 4hrs | 4hrs |
 | Push data to search and button| H | 5hrs| 5hrs | 2.5hrs |
-| Testing | H | 1hrs| 1hrs | 1hrs |
+| Testing | H | 3hrs| 3hrs | 3hrs |
 | Add css to the data | H | 3hrs| 2.5hrs | 2.5hrs |
 | delete data when a new search | H | 3hrs| 2.5hrs | 2.5hrs |
-| Add css styling to website | H | 3hrs| 2.5hrs | 2.5hrs |
+| Add css styling to website | H | 4.5hrs| 4.5hrs | 4.5hrs |
 | deploy website | H | 1hrs| 1hrs | 1hrs |
 | Add extra css styling | H | 3hrs| 2.5hrs | 2.5hrs |
-| Total | H | 32hrs| 32hrs | 5hrs |
+| Total | H | 37hrs| 32hrs | 5hrs |
 
 ## Code Snippet
 
