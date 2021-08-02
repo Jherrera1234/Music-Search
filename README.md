@@ -81,7 +81,7 @@ size: "extralarge"
 #### MVP 
 -Ceate a search button and make it interactable 
 - Create a title for the webpage
-- Have the artist pop up with a picture, their top 5 albums and songs with pictures along side them 
+- Have the artist pop up with a picture, their top 5 albums and songs 
 - center it all and make it look neat
 - put numbers to the albums and tracks according to their ranks
 - add some photos for the background of the website 
@@ -106,7 +106,7 @@ size: "extralarge"
 
 ## Priority Matrix
 
-Include a full list of features that have been prioritized based on the `Time and Importance` Matrix.  Link this image in a similar manner to your wireframes
+![image](https://user-images.githubusercontent.com/56912648/127872315-58255f09-1f2f-4810-a247-ce88940fc17d.png)
 
 ## Timeframes
 
