@@ -1,6 +1,6 @@
 body{
   text-align: center;
-  
+  background-color: #0B4F6C;
 }
 
 input {
@@ -38,6 +38,7 @@ align-items: left;
 #music-image{
   width: 259px;
     height: 194px;
+
 }
 #album-image{
   width: 259px;

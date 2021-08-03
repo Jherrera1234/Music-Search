@@ -2,6 +2,7 @@ const DOMAIN = 'http://ws.audioscrobbler.com/2.0/?';
 const API_KEY = '1c016c221b041952182fccd590cdaeda'
 const METHOD1 = 'artist.gettoptracks'
 const METHOD2 = 'artist.gettopalbums'
+
 //const ARTIST = 'IDK'
 //const BASE_URL = `${DOMAIN}method=${METHOD1}&artist=${ARTIST}&api_key=${API_KEY}&format=json`;
 
@@ -9,16 +10,26 @@ const trackInfo = document.querySelector('#artist-info')
 const albumInfo = document.querySelector('#ablum-info')
 const button = document.querySelector('#search')
 
+function renderArtistBio() {
+
+}
+
+
+
+
 function renderArtist(music) {
   //Will be able to loop through the information array and create the neccessary elements 
   for (let i = 0; i < 10; i++) {
-    let artistElements = `
+    let artistElements = `<div class ="track-flex">
     <h1 class="track-name">${music[i].name}</h1>
     <h2 class="track-rank">Rank ${i + 1}</h2>
     <img id="music-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbgnJfzMZ4d_suM4FMnoRnhHjgbyY0vmRnxQfgPZ-PbiZkAGYozqNSzTrXkd9rQjsiKe4&usqp=CAU" >
+    
     <h3 class="track-playcount">Playcount: ${music[i].playcount}</h3>
+    </div>
     `
     //<img src="${music[i].image[1].#text}">
+    // Attach all the created elements and attaches it to artist info 
     document.querySelector('#artist-info').insertAdjacentHTML('beforeend', artistElements)
 
   }
@@ -55,7 +66,7 @@ const getArtist = async () => {
     const artist = await axios.get(`${DOMAIN}method=${METHOD1}&artist=${inputArtist}&api_key=${API_KEY}&format=json`)
     const artistAlbum = await axios.get(`${DOMAIN}method=${METHOD2}&artist=${inputArtist}&api_key=${API_KEY}&format=json`)
     //console.log(artistAlbum.data.topalbums.album)
-    //console.log(artist.data.toptracks.track)
+    //console.log(artist.data.toptracks)
     const artistTracks = artist.data.toptracks.track
     const artistAlbums = artistAlbum.data.topalbums.album
     renderArtist(artistTracks)
