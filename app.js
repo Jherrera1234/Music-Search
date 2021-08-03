@@ -6,11 +6,12 @@ const METHOD2 = 'artist.gettopalbums'
 //const BASE_URL = `${DOMAIN}method=${METHOD1}&artist=${ARTIST}&api_key=${API_KEY}&format=json`;
 
 const trackInfo = document.querySelector('#artist-info')
+const albumInfo = document.querySelector('#ablum-info')
 const button = document.querySelector('#search')
 
 function renderArtist(music) {
   //Will be able to loop through the information array and create the neccessary elements 
-  for (let i = 0; i < 26; i++) {
+  for (let i = 0; i < 10; i++) {
     let artistElements = `
     <h1 class="track-name">${music[i].name}</h1>
     <h2 class="track-rank">Rank ${i + 1}</h2>
@@ -27,7 +28,7 @@ function renderArtist(music) {
 
 function rednerAlbum(albums) {
 
-  for (let i = 0; i < 26; i++) {
+  for (let i = 0; i < 10; i++) {
     let artistElements = `
     <h1 class="album-name">${albums[i].name}</h1>
     <h2 class="album-rank">Rank ${i + 1}</h2>
@@ -46,6 +47,7 @@ function rednerAlbum(albums) {
 
 const getArtist = async () => {
   removeArtistTracks()
+  removeArtistAlbum()
 
   try {
     //Will be able to retrieve the necessary data from the music api
@@ -70,6 +72,13 @@ const getArtist = async () => {
 
 function removeArtistTracks() {
   const removeElement = trackInfo
+  while (removeElement.lastChild) {
+    removeElement.removeChild(removeElement.lastChild)
+  }
+}
+
+function removeArtistAlbum() {
+  const removeElement = albumInfo
   while (removeElement.lastChild) {
     removeElement.removeChild(removeElement.lastChild)
   }
