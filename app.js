@@ -11,7 +11,8 @@ const albumInfo = document.querySelector('#ablum-info')
 const button = document.querySelector('#search')
 
 function renderArtistBio(music) {
-  let bioElements = `<div class="bio-flex">
+  let bioElements = `
+  <div class = "bio-elements">
   <p>${music}</p>
   </div>
   `
@@ -25,7 +26,8 @@ function renderArtistBio(music) {
 function renderArtist(music) {
   //Will be able to loop through the information array and create the neccessary elements 
   for (let i = 0; i < 10; i++) {
-    let artistElements = `<div class ="track-flex">
+    let artistElements = `
+    <div class = 'artist-Elements'>
     <h1 class="track-name">${music[i].name}</h1>
     <h2 class="track-rank">Rank ${i + 1}</h2>
     <img id="music-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbgnJfzMZ4d_suM4FMnoRnhHjgbyY0vmRnxQfgPZ-PbiZkAGYozqNSzTrXkd9rQjsiKe4&usqp=CAU" >
@@ -46,7 +48,7 @@ function rednerAlbum(albums) {
 
   for (let i = 0; i < 10; i++) {
     let artistElements = `
-    <div class = 'album-flex'>
+    <div class ='album-elements'>
     <h1 class="album-name">${albums[i].name}</h1>
     <h2 class="album-rank">Rank ${i + 1}</h2>
     <img id="album-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwCJi_YvsFmZVu_-ZvbIXMU9PH1162Q3ISng&usqp=CAU" >

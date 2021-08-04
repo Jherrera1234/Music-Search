@@ -27,13 +27,12 @@ header{
   border: 5px solid black;
 }
 
-#artist-info{
-display:flex;
-justify-content: left;
-flex-direction: column;
-align-items: left;
+.artist-list{
+display: flex;
+justify-content: space-around;
 
 }
+
 
 #music-image{
   width: 259px;
