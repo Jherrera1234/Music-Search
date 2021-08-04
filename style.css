@@ -15,6 +15,13 @@ button{
   border-radius: 14%;
   
 }
+header{
+  border: 5px solid black;
+}
+
+
+
+@media only screen and (min-width: 650px){
 .search-section{
   display: flex;
   justify-content: center;
@@ -23,9 +30,7 @@ button{
   margin: 10px;
 }
 
-header{
-  border: 5px solid black;
-}
+
 
 .artist-list{
 display: flex;
@@ -44,4 +49,4 @@ justify-content: space-around;
     height: 194px;
 }
 
-
+}
