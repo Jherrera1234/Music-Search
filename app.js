@@ -41,10 +41,12 @@ function rednerAlbum(albums) {
 
   for (let i = 0; i < 10; i++) {
     let artistElements = `
+    <div class = 'album-flex'>
     <h1 class="album-name">${albums[i].name}</h1>
     <h2 class="album-rank">Rank ${i + 1}</h2>
     <img id="album-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwCJi_YvsFmZVu_-ZvbIXMU9PH1162Q3ISng&usqp=CAU" >
     <h3 class="album-playcount">Playcount: ${albums[i].playcount}</h3>
+    </div>
     `
     //<img src="${music[i].image[1].#text}">
     document.querySelector('#ablum-info').insertAdjacentHTML('beforeend', artistElements)
