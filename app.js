@@ -2,15 +2,20 @@ const DOMAIN = 'http://ws.audioscrobbler.com/2.0/?';
 const API_KEY = '1c016c221b041952182fccd590cdaeda'
 const METHOD1 = 'artist.gettoptracks'
 const METHOD2 = 'artist.gettopalbums'
+const METHOD3 = 'artist.getinfo'
 
-//const ARTIST = 'IDK'
-//const BASE_URL = `${DOMAIN}method=${METHOD1}&artist=${ARTIST}&api_key=${API_KEY}&format=json`;
 
+const bioInfo = document.querySelector('#artist-bio')
 const trackInfo = document.querySelector('#artist-info')
 const albumInfo = document.querySelector('#ablum-info')
 const button = document.querySelector('#search')
 
-function renderArtistBio() {
+function renderArtistBio(music) {
+  let bioElements = `<div class="bio-flex">
+  <p>${music}</p>
+  </div>
+  `
+  document.querySelector('#artist-bio').insertAdjacentHTML('beforeend', bioElements)
 
 }
 
@@ -61,18 +66,22 @@ function rednerAlbum(albums) {
 const getArtist = async () => {
   removeArtistTracks()
   removeArtistAlbum()
-
+  removeArtistBio()
   try {
     //Will be able to retrieve the necessary data from the music api
     const inputArtist = document.querySelector('input').value
     const artist = await axios.get(`${DOMAIN}method=${METHOD1}&artist=${inputArtist}&api_key=${API_KEY}&format=json`)
     const artistAlbum = await axios.get(`${DOMAIN}method=${METHOD2}&artist=${inputArtist}&api_key=${API_KEY}&format=json`)
+    const artistBios = await axios.get(`${DOMAIN}method=${METHOD3}&artist=${inputArtist}&api_key=${API_KEY}&format=json`)
     //console.log(artistAlbum.data.topalbums.album)
     //console.log(artist.data.toptracks)
+    //console.log(artistBios.data.artist.bio.summary)
     const artistTracks = artist.data.toptracks.track
     const artistAlbums = artistAlbum.data.topalbums.album
+    const bio = artistBios.data.artist.bio.summary
     renderArtist(artistTracks)
     rednerAlbum(artistAlbums)
+    renderArtistBio(bio)
     // console.log(artistTracks[0].name)
 
 
@@ -92,6 +101,13 @@ function removeArtistTracks() {
 
 function removeArtistAlbum() {
   const removeElement = albumInfo
+  while (removeElement.lastChild) {
+    removeElement.removeChild(removeElement.lastChild)
+  }
+}
+
+function removeArtistBio() {
+  const removeElement = bioInfo
   while (removeElement.lastChild) {
     removeElement.removeChild(removeElement.lastChild)
   }
