@@ -39,6 +39,8 @@ font-family: 'Poppins', sans-serif;
 color:black;
 font-weight: 150;
 background-color:white;
+margin: 20px 0px 20px 0px;
+
 }
 
 footer{
@@ -49,12 +51,12 @@ footer{
   align-items: center;
 }
 
-.artist-Elements{
+/* .artist-Elements{
   display: inline;
 }
 .album-elements{
   display: inline;
-}
+} */
 
 
 
