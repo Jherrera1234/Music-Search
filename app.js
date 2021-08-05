@@ -3,11 +3,13 @@ const API_KEY = '1c016c221b041952182fccd590cdaeda'
 const METHOD1 = 'artist.gettoptracks'
 const METHOD2 = 'artist.gettopalbums'
 const METHOD3 = 'artist.getinfo'
+const METHOD4 = 'artist.getsimilar'
 
 
 const bioInfo = document.querySelector('#artist-bio')
 const trackInfo = document.querySelector('#artist-info')
 const albumInfo = document.querySelector('#ablum-info')
+const recomInfo = document.querySelector('#recomm-Artist')
 const button = document.querySelector('#search')
 
 function renderArtistBio(music) {
@@ -60,30 +62,60 @@ function rednerAlbum(albums) {
 
   }
 
+}
 
+
+function recommendArtist(artistData) {
+
+  for (let i = 0; i < 5; i++) {
+    let recomElements = `
+    <div class ='recomm-elements'>
+    <h3 class="recomm-name">${artistData[i].name}</h1>
+    <h3 class="recomm-url">URL: ${artistData[i].url}</h3>
+    </div>
+    `
+    //<img src="${music[i].image[1].#text}">
+    document.querySelector('#recomm-Artist').insertAdjacentHTML('beforeend', recomElements)
+
+  }
 
 
 }
+
+
+
+
 
 const getArtist = async () => {
   removeArtistTracks()
   removeArtistAlbum()
   removeArtistBio()
+  removeRecommended()
   try {
     //Will be able to retrieve the necessary data from the music api
     const inputArtist = document.querySelector('input').value
     const artist = await axios.get(`${DOMAIN}method=${METHOD1}&artist=${inputArtist}&api_key=${API_KEY}&format=json`)
     const artistAlbum = await axios.get(`${DOMAIN}method=${METHOD2}&artist=${inputArtist}&api_key=${API_KEY}&format=json`)
     const artistBios = await axios.get(`${DOMAIN}method=${METHOD3}&artist=${inputArtist}&api_key=${API_KEY}&format=json`)
+    const artistRecom = await axios.get(`${DOMAIN}method=${METHOD4}&artist=${inputArtist}&api_key=${API_KEY}&format=json`)
+
     //console.log(artistAlbum.data.topalbums.album)
     //console.log(artist.data.toptracks)
     //console.log(artistBios.data.artist.bio.summary)
+    // console.log(artistRecom.data.similarartists.artist)
+    //neccessary pathway to get to the track information
     const artistTracks = artist.data.toptracks.track
+    //neccessary pathway to get to the artist top albums
     const artistAlbums = artistAlbum.data.topalbums.album
+    //neccessary way to get to the artist bio summary
     const bio = artistBios.data.artist.bio.summary
+    //neccessary pathway to get to the recommended artist data
+    const recommend = artistRecom.data.similarartists.artist
+
     renderArtist(artistTracks)
     rednerAlbum(artistAlbums)
     renderArtistBio(bio)
+    recommendArtist(recommend)
     // console.log(artistTracks[0].name)
 
 
@@ -113,6 +145,14 @@ function removeArtistBio() {
   while (removeElement.lastChild) {
     removeElement.removeChild(removeElement.lastChild)
   }
+}
+
+function removeRecommended() {
+  const removeElement = recomInfo
+  while (removeElement.lastChild) {
+    removeElement.removeChild(removeElement.lastChild)
+  }
+
 }
 
 
