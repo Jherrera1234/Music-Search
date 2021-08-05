@@ -30,11 +30,11 @@ function renderArtist(music) {
   for (let i = 0; i < 10; i++) {
     let artistElements = `
     <div class = 'artist-Elements'>
-    <h1 class="track-name">${music[i].name}</h1>
+    <h2 class="track-name">${music[i].name}</h2>
     <h2 class="track-rank">Rank ${i + 1}</h2>
     <img id="music-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbgnJfzMZ4d_suM4FMnoRnhHjgbyY0vmRnxQfgPZ-PbiZkAGYozqNSzTrXkd9rQjsiKe4&usqp=CAU" >
-    
     <h3 class="track-playcount">Playcount: ${music[i].playcount}</h3>
+    <a class="url" href="${music[i].url}">URL:${music[i].name}</a>
     </div>
     `
     //<img src="${music[i].image[1].#text}">
@@ -51,10 +51,11 @@ function rednerAlbum(albums) {
   for (let i = 0; i < 10; i++) {
     let artistElements = `
     <div class ='album-elements'>
-    <h1 class="album-name">${albums[i].name}</h1>
+    <h2 class="album-name">${albums[i].name}</h2>
     <h2 class="album-rank">Rank ${i + 1}</h2>
     <img id="album-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwCJi_YvsFmZVu_-ZvbIXMU9PH1162Q3ISng&usqp=CAU" >
     <h3 class="album-playcount">Playcount: ${albums[i].playcount}</h3>
+    <a class="url" href="${albums[i].url}">URL:${albums[i].name} </a>
     </div>
     `
     //<img src="${music[i].image[1].#text}">
@@ -70,10 +71,11 @@ function recommendArtist(artistData) {
   for (let i = 0; i < 5; i++) {
     let recomElements = `
     <div class ='recomm-elements'>
-    <h3 class="recomm-name">${artistData[i].name}</h1>
-    <h3 class="recomm-url">URL: ${artistData[i].url}</h3>
+    
+    <a href="${artistData[i].url}">URL:${artistData[i].name} </a>
     </div>
     `
+    // <h3 class="recomm-name">${artistData[i].name}</h1>
     //<img src="${music[i].image[1].#text}">
     document.querySelector('#recomm-Artist').insertAdjacentHTML('beforeend', recomElements)
 
