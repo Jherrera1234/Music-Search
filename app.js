@@ -1,4 +1,4 @@
-const DOMAIN = 'http://ws.audioscrobbler.com/2.0/?';
+const DOMAIN = 'https://ws.audioscrobbler.com/2.0/?';
 const API_KEY = '1c016c221b041952182fccd590cdaeda'
 const METHOD1 = 'artist.gettoptracks'
 const METHOD2 = 'artist.gettopalbums'
@@ -37,12 +37,11 @@ function renderArtist(music) {
     <a class="url" href="${music[i].url}">URL:${music[i].name}</a>
     </div>
     `
-    //<img src="${music[i].image[1].#text}">
     // Attach all the created elements and attaches it to artist info 
     document.querySelector('#artist-info').insertAdjacentHTML('beforeend', artistElements)
 
   }
-  //return artistElements
+
 
 }
 
@@ -58,7 +57,6 @@ function rednerAlbum(albums) {
     <a class="url" href="${albums[i].url}">URL:${albums[i].name} </a>
     </div>
     `
-    //<img src="${music[i].image[1].#text}">
     document.querySelector('#ablum-info').insertAdjacentHTML('beforeend', artistElements)
 
   }
@@ -71,14 +69,10 @@ function recommendArtist(artistData) {
   for (let i = 0; i < 5; i++) {
     let recomElements = `
     <div class ='recomm-elements'>
-    
     <a href="${artistData[i].url}">URL:${artistData[i].name} </a>
     </div>
     `
-    // <h3 class="recomm-name">${artistData[i].name}</h1>
-    //<img src="${music[i].image[1].#text}">
     document.querySelector('#recomm-Artist').insertAdjacentHTML('beforeend', recomElements)
-
   }
 
 
@@ -100,11 +94,6 @@ const getArtist = async () => {
     const artistAlbum = await axios.get(`${DOMAIN}method=${METHOD2}&artist=${inputArtist}&api_key=${API_KEY}&format=json`)
     const artistBios = await axios.get(`${DOMAIN}method=${METHOD3}&artist=${inputArtist}&api_key=${API_KEY}&format=json`)
     const artistRecom = await axios.get(`${DOMAIN}method=${METHOD4}&artist=${inputArtist}&api_key=${API_KEY}&format=json`)
-
-    //console.log(artistAlbum.data.topalbums.album)
-    //console.log(artist.data.toptracks)
-    //console.log(artistBios.data.artist.bio.summary)
-    // console.log(artistRecom.data.similarartists.artist)
     //neccessary pathway to get to the track information
     const artistTracks = artist.data.toptracks.track
     //neccessary pathway to get to the artist top albums
@@ -118,7 +107,6 @@ const getArtist = async () => {
     rednerAlbum(artistAlbums)
     renderArtistBio(bio)
     recommendArtist(recommend)
-    // console.log(artistTracks[0].name)
 
 
   }
@@ -156,6 +144,4 @@ function removeRecommended() {
   }
 
 }
-
-
 button.addEventListener('click', getArtist)
