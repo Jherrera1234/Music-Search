@@ -68,15 +68,14 @@ rank: "1"
 
 ## Project Schedule
 
-
 |  Day | Deliverable | Status
 |---|---| ---|
-|July 30| Prompt / Wireframes / Priority Matrix / Timeframes | Incomplete
-|August 2| Project Approval / Core Application Structure (HTML, CSS, etc.) | Incomplete
-|August 3| Pseudocode / render data and attach to the button | Incomplete
-|August 4| MVP  | Incomplete
-|August 5| Post-MVP/Advanced CSS touch ups | Incomplete
-|August 6| Presentations | Incomplete
+|August 20| Prompt / Wireframes / Priority Matrix / Timeframes |Complete
+|August 2| Project Approval / Core Application Structure (HTML, CSS, etc.) | Complete
+|August 3| Pseudocode / render data and attach to the button |Complete
+|August 4| MVP  | Complete
+|August 5| Post-MVP/Advanced CSS touch ups | Complete
+|August 6| Presentations | Complete
 
 ## Priority Matrix
 
